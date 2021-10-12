@@ -47,7 +47,7 @@ app.get('/breedsList', async (req, res) => {
         }
     });
 });
-//get data from external endpoint
+//get data from external url
 //API key:3fb10d32-16b7-4f95-9fbe-05d5014538a4
 const fetch = require('node-fetch');
 app.get('/v1/breeds',(req,res)=>{
