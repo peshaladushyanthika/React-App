@@ -6,7 +6,7 @@ const pool = require('./database_connection');
 
 //to use json body in requests
 app.use(express.json());
-
+//post response for create endpoint
 app.post('/create', async (req, res) => {
     const userDetails = req.body;
 pool.query(
