@@ -31,7 +31,7 @@ const FillForm = () => {
             
 
         };
-
+//to post data
         axios.post('http://localhost:3000/create' , object)
         .then(res => alert(res.data));
 
