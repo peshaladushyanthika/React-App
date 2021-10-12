@@ -9,6 +9,7 @@ app.use(express.json());
 //post response for create endpoint
 app.post('/create', async (req, res) => {
     const userDetails = req.body;
+    //query attributes and access data
 pool.query(
     'INSERT INTO sampledb(Name,Description,Adaptability,Affection_Level,Child_Friendly,Stranger_Friendly,Energy_Level,Weight)'
     ,VALUES(
