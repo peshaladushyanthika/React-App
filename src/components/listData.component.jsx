@@ -26,7 +26,7 @@ export default class ListData extends Component{
       console.log("error" , error);
     });
   }
-
+//create function to access outside class
   DataTable(){
     return this.state.breeds.map((res,i)=>{
       return <BreedsTableRow object = {res}  key = {i} />
