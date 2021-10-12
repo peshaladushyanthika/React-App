@@ -36,7 +36,9 @@ const FillForm = () => {
         .then(res => alert(res.data));
 
     }
-    return (<div className="form-wrapper">
+    return (
+        //create form ui
+    <div className="form-wrapper">
         <Form onSubmit={handleSubmit}>
 
             <Form.Group controlId="name">
