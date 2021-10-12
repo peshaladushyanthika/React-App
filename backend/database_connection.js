@@ -7,6 +7,7 @@ const pool = new Pool({
     password : '1234neto',
     port : 5432,
 });
+//connect database
 pool
 .connect()
 .then(()=>{
