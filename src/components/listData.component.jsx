@@ -3,9 +3,6 @@ import axios from 'axios';
 import BreedsTableRow from './breedsTableRow.componenet';
 import GlobalFilter from './filtering.component';
 
-
-//import table from 'react-bootstrap/Table';
-
 export default class ListData extends Component{
 
   constructor(props){
@@ -41,11 +38,13 @@ export default class ListData extends Component{
  render(){
        
         return(
+//create table
+          
              <div className="input-group">
-            {/* // <div className="form-outline">
-            //   <input id="search-input" type="search" id="form1" className="form-control" />
-            //   <label className="form-label" for="form1">Search</label>
-            // </div> */}
+             <div className="form-outline">
+              <input id="search-input" type="search" id="form1" className="form-control" />
+               <label className="form-label" for="form1">Search</label>
+             </div>
             <GlobalFilter></GlobalFilter>
             <table className="table">
                 <thead>
