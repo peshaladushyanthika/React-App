@@ -7,6 +7,7 @@ export default class BreedsTableRow extends Component{
   
     render(){
         return(
+            //access data to show in table
             <tr>
                 <td>{this.props.object.name}</td>
                 <td>{this.props.object.description}</td>
