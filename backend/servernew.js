@@ -1,10 +1,10 @@
-//setting up express server
+//setting up express.js server
 const express = require('express');
 const app = express();
 const port = 3000;
 const pool = require('./database_connection');
 
-///tell app to use json body in requests
+//to use json body in requests
 app.use(express.json());
 
 app.post('/create', async (req, res) => {
