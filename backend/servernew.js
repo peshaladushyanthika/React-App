@@ -33,7 +33,7 @@ pool.query(
         }
  });
 });
-//for get request
+//get request for breedlist endpoint
 app.get('/breedsList', async (req, res) => {
     pool.query('SELECT * FROM breeds_data ORDER BY name', 
     
