@@ -1,5 +1,4 @@
 //setting up database with postgresql
-
 const Pool = require('pg').Pool;
 const pool = new Pool({
     user : 'postgres',
