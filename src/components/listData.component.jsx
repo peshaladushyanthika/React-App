@@ -1,7 +1,10 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import BreedsTableRow from './breedsTableRow.componenet';
-import GlobalFilter from './filtering.component';
+import FilterData from './filtering.component';
+
+
+//import table from 'react-bootstrap/Table';
 
 export default class ListData extends Component{
 
@@ -15,10 +18,8 @@ export default class ListData extends Component{
     };
   }
 
-  //get request
-  
   componentDidMount(){
-    axios.get('http://localhost:3000/breedsList')
+    const result = axios.get('http://localhost:3000/breedsList')
     .then(res => {
       this.setState({
         breeds : res.data
@@ -28,26 +29,24 @@ export default class ListData extends Component{
       console.log("error" , error);
     });
   }
-//create function to access outside class
-  DataTable(){
+
+   DataTable(){
     return this.state.breeds.map((res,i)=>{
       return <BreedsTableRow object = {res}  key = {i} />
     })
   }
-  
-
-
  render(){
        
         return(
-//create table
-          
              <div className="input-group">
-             <div className="form-outline">
-              <input id="search-input" type="search" id="form1" className="form-control" />
-               <label className="form-label" for="form1">Search</label>
-             </div>
-            <GlobalFilter></GlobalFilter>
+               
+                <FilterData/>
+               
+               {/* <div className="form-outline">
+                <input id="search-input" type="search" id="form1" className="form-control" />
+                <label className="form-label" for="form1">Search</label>
+              </div> */}
+            
             <table className="table">
                 <thead>
     <tr>
@@ -62,11 +61,17 @@ export default class ListData extends Component{
       <th scope="col">Weight</th>
     </tr>
     <tr>
-      <td>sharmila</td>
+    
     </tr>
   </thead>
   <tbody>
    
+<tr>
+  <td>1</td>
+  <td>name1</td>
+  <td>des1</td>
+</tr>
+
 
     {this.DataTable()}
 
