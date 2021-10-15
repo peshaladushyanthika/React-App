@@ -1,37 +1,26 @@
-import React from "react";
-import { useTable, useFilters, useGlobalFilter, useAsyncDebounce } from 'react-table'
+import React from 'react';
+import { Table } from 'react-bootstrap';
 
+const FilterData = ()=>{
+    const[search,setSearch] = React.useState('');
+    const handleSearch = (event) => {
+        setSearch(event.target.value);
+    };
+const data = {
+   
+     };
+return(
+        <>
+        <label htmlFor = "search">
+        Search
+<input id="search-input" type="search" onChange = {handleSearch} />
+            </label>
+              
+           <Table data = {data}>
 
-function GlobalFilter({
-    preGlobalFilteredRows,
-    globalFilter,
-    setGlobalFilter,
-  }) 
-  {
-    const count = preGlobalFilteredRows.length
-    const [value, setValue] = React.useState(globalFilter)
-    const onChange = useAsyncDebounce(value => {
-      setGlobalFilter(value || undefined)
-    }, 200)
-
-    return(
-        <span>
-        Search:{' '}
-        <input
-          value={value || ""}
-          onChange={e => {
-            setValue(e.target.value);
-            onChange(e.target.value);
-          }}
-          placeholder={`${count} records...`}
-        />
-      </span>
-  
-    )
-
+           </Table>
+        </>   
+        )
 }
 
-
-
-
-export default GlobalFilter;
+export default FilterData;
