@@ -52,7 +52,6 @@ app.get('/breedsList', async (req, res) => {
 });
 //get data from external endpoint
 //API key:3fb10d32-16b7-4f95-9fbe-05d5014538a4
-
 const external = {
     method : 'GET',
     url : 'https://api.thecatapi.com/v1/breeds',
